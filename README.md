@@ -14,7 +14,7 @@ This line is to check - Aniruddha
 
 - Role wise functionalities:
   - Imposter's movement should not be visible to other players but mode of the transport should be visible.
-  - 
+  - Imposter msut reveal his position occasionally.
 
 - Login Not Needed (As of now, can be implemented in future)
 
