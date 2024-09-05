@@ -21,7 +21,6 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
    		- List of 18 Stations (starting station), and 6 will be picked out of those stations randomly (1 for each player).
 
 # HLD Discussions:
-
 - Room ID (So that multiple users can connect to this room)
 	- Create (host)
 	- Join 
@@ -36,11 +35,11 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 
 - Start card For all players (Station Number - Random)
   	
-
 - Validations:
 	- If target location of any player is same as target location of other player in previous step, then we should enter the entries.
 	- Source station of player for a turn should be same as target station of previous turn.
 	- Automatically populate source station.
+ 	- App should reveal Mr. X's location on specific steps (which we will hardcode).
 
 Game Over (for a player):
 	- Movement not possible for player. (based on available tickets and current location)
@@ -56,3 +55,4 @@ Game Over (for Mr. X):
 // step 3 : Mr. x reveal location
 // step 4 : Mr. x
 // step 5 : Mr. x
+
