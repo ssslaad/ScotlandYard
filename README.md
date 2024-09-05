@@ -39,7 +39,7 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 	- If target location of any player is same as target location of other player in previous step, then we should enter the entries.
 	- Source station of player for a turn should be same as target station of previous turn.
 	- Automatically populate source station.
- 	- App should reveal Mr. X's location on specific steps (which we will hardcode).
+ 	- App should reveal Mr. X's location on specific steps (which we will hardcode - Step 3, 8, 13, 18, 24).
 
 Game Over (for a player):
 	- Movement not possible for player. (based on available tickets and current location)
