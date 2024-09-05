@@ -2,7 +2,7 @@
 This repository is for a popular board game "ScotlandYard" where detectives tries to find Mr. X in the Scotland City.
 
 # Terminologies:
-- Players - Detectives and Mr. X (Characters in the game).
+- Players - Detectives and Mr. X (Characters in the game - Max. 6)
 - Users - People who are logged in to the game.
 - Roles - Detective or Mr. X (either of them is a role. Based on role, we will restrict the display of information).
 - Host - User who created the room.
@@ -13,6 +13,8 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 		- **Underground - 23** (detectives will have 4 tickets each)
 		- **Black Ticket - 5** (Mr. X will have all 5 tickets)
 		- **Label Ticket - 1** (Mr. X will have 1 ticket)
+    
+  	- Mr. X's respective transportation tickets should increase by 1 when detective plays.
 	
 	- Special Abilities:
    		- **2x(Double Move) - 2** (Mr. X will have all 2 tickets)
