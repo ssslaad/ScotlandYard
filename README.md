@@ -3,6 +3,21 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 This line is written by Shivam
 This line is to check - Aniruddha
 
+# Terminologies:
+- Players - Detectives and Mr. X (Characters in the game).
+- Users - People who are logged in to the game.
+- Roles - Detective or Mr. X (either of them is a role. Based on role, we will restrict the display of information).
+- Host - User who created the room.
+- Tickets: 
+	- Transportation
+		- **Taxi - 54** (detectives will have 10 tickets each)
+		- **Bus - 43** (detectives will have 8 tickets each)
+		- **Underground - 23** (detectives will have 4 tickets each)
+		- **Black Ticket - 5** (Mr. X will have all 5 tickets)
+		- **White Ticket - 1** (Mr. X will have 1 ticket)
+	
+	- Special Abilities
+   		- **2x - 2** (Mr. X will have all 2 tickets)
 
 # HLD Discussions:
 
@@ -31,4 +46,5 @@ Game Over (for a player):
 
 Game Over (for Mr. X):
   - If Mr. X's current location is same as any detectives current location, it's GAME OVER for Mr. X
+
 
