@@ -3,7 +3,7 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 
 # Terminologies:
 - Players - Detectives and Mr. X (Characters in the game - Max. 6)
-- Step - 
+- Step - When all roles plays their turn a step completes.
 - Users - People who are logged in to the game.
 - Roles - Detective or Mr. X (either of them is a role. Based on role, we will restrict the display of information).
 - Host - User who created the room.
