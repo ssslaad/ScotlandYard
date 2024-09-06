@@ -1,5 +1,7 @@
+const protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+
 const stompClient = new StompJs.Client({
-    brokerURL: 'ws://localhost:8080/websocketpoc'
+    brokerURL: `${protocol}://vigilant-umbrella-97pvr56x45fp9gp-8080.app.github.dev/websocketpoc`
 });
 
 stompClient.onConnect = (frame) => {
