@@ -3,6 +3,7 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 
 # Terminologies:
 - Players - Detectives and Mr. X (Characters in the game - Max. 6)
+- Step - 
 - Users - People who are logged in to the game.
 - Roles - Detective or Mr. X (either of them is a role. Based on role, we will restrict the display of information).
 - Host - User who created the room.
@@ -28,10 +29,12 @@ This repository is for a popular board game "ScotlandYard" where detectives trie
 	- Join 
 	- Turn Table UI (Mr. X first, then random turns)
 	- Host should decide the **roles** of all the players in the room. It should be 2 step process - First decide Imposter, then remove the player name (who is imposter) from detectives dropdown.
-
+	- Room should be closed once the game analysis is done.
+	- Disconnected players should be able to join same room. 
+   
 - Role wise functionalities:
 	- Imposter's movement should not be visible to other players but mode of the transport should be visible.
-	- Imposter msut reveal his position occasionally.
+	- Imposter must reveal his position occasionally.
 
 - Login Not Needed (As of now, can be implemented in future)
 
@@ -58,3 +61,19 @@ Game Over (for Mr. X):
 // step 4 : Mr. x
 // step 5 : Mr. x
 
+- Modules :
+  	- Landing page
+	- Create Room (no. of players, roles assignment option - random/custom)
+        - Join Room
+	- Loby - Role assignment(random/custom), start game button (disabled until all roles assigned)
+	- Game(Playground)
+ 		- Initialization (Start locations)
+    		- Step (max. 24)
+     		- Mr.X special abilities (2 step + reveal position) 
+      		- Game Over
+	- Reconnecting Module
+	- Add Friend(Good to have)
+ 
+ 
+ 
+ 
