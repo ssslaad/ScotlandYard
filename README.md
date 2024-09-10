@@ -1,6 +1,9 @@
 # ScotlandYard
 This repository is for a popular board game "ScotlandYard" where detectives tries to find Mr. X in the Scotland City.
 
+# Figma
+https://www.figma.com/design/tBbWLISE7G41F2QKVyHDoC/Scotland-Yard-Tracker?node-id=0-1&m=dev&t=2oUOz3cFpTC0zhxq-1
+
 # Terminologies:
 - Players - Detectives and Mr. X (Characters in the game - Max. 6)
 - Step - When all roles plays their turn a step completes.
