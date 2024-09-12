@@ -1,7 +1,7 @@
 # ScotlandYard
 This repository is for a popular board game "ScotlandYard" where detectives tries to find Mr. X in the Scotland City.
 
-# Figma
+# Figma (Draft)
 https://www.figma.com/design/tBbWLISE7G41F2QKVyHDoC/Scotland-Yard-Tracker?node-id=0-1&m=dev&t=2oUOz3cFpTC0zhxq-1
 
 # Terminologies:
@@ -25,8 +25,50 @@ https://www.figma.com/design/tBbWLISE7G41F2QKVyHDoC/Scotland-Yard-Tracker?node-i
 
 	- Start Card:
    		- List of 18 Stations (starting station), and 6 will be picked out of those stations randomly (1 for each player).
+       
+# Requirements:
+## Functional Requirements:
+1. User should be able to host the room and give the password (can be empty) for the room.
+2. User should be able to join the room using the room id & password (can be empty).
+	- If user tries to join the non-existing room or existing room with wrong password, an error popup should give the appropriate message.
+	- If user tries to join a room, which is already full (contains 6 players), an error popup should give the appropriate message.
+4. Game can start only if minimum 2 players have joined the room.
+5. Room can contain maximum of 6 players.
+6. Once everyone is joined and host wants to start the game, they should be able to do it from UI using a "Start Game" button.
+7. Once the host starts the game:
+	- Roles (Mr. X and detective) should be randomly assigned to players. If players are less than 6, then single player should be assigned multiple detectives role. Player having Mr. X's role should not be given detective's role and vice-versa.
+ 	- All the players should be shown the roles of every player. (like we see on Among-Us game)
+	- Each player should be given a starting position out of a possible list of starting-positions.
+	- Imposter should be given 1st turn/move to play.
+	- Next moves can be randomly assigned to detectives and sequence should be same for rest of the game.
+	- The player (who is playing) should be shown all the possible options of movement along with tickets count (ex. Taxi, Bus, Underground, Black Ticket, White Ticket, 2x move etc).
+ 	- After every step/move, appropriate ticket should be deducted from players tickets.
+ 	- Mr. X's movement should **not** be visible to other players but mode of transport should be visible.
+  	- Detective's movement should be visible to every other players along with mode of transport.
+  	- Automatically populate the source location of the players and Source location of player should be same as previous target location (user should not be able to enter source location). For the very 1st move, the starting location will be the source location of the player.
+  	- Automatically disclose Mr. X's location after 3, 8, 13, 18, 24 steps.
+ 	- If player with role "Detective" drops/disconnects in between the game, wait 1 mins for that player to rejoin, else assign that particular character/role to different player. If the player rejoins after 1 min, lets say after few mins, that user again joins the room, assign back that role back to that player.
+		For ex. if player with role Detective Blue disconnects, wait for 1 min, else assign Detective blue's role to different player.
+	- If player with role 'Mr. X' disconnects/drops, wait for next 5 mins, else close the game.
+	- Game Over Scenarios for players:
+ 		- If at any point of time, any of the detectives location and Mr. X's location is same, we should show the message "Game Over" for Mr. X. 
+		- Movement not possible for player (based on available tickets and current location)
+	  	- Tickets finished.
+	   	- If Mr. X plays all 24 moves, he Wins and game over for Detectives.
+8. Once the game is over, an option to "Show moves" of all the players during entire game should be visible to everyone.
+9. If user clicks on Show Moves", visual graph should be visible with step by step movement of each player in sequence(sequence should be same as was in the game).
+10. If user doesn't click on "Show Moves", they should be redirected to Start Screen (where they can either join/host the room). Name of the user should be automatically populated in the Start Screen.
 
-# HLD Discussions:
+## Non-functional Requirements:
+1. Room ID should be unique and given from backend.
+2. All passwords should be encrypted.
+3. The list of possible starting positions should be stored in DB.
+4. Room and associated users along with role of the user (for that particular game/room) should be stored in DB.
+5. User should be stored in DB and should be uniquely identifiable.
+6. Moves of all the players of all the games should be stored in DB for future references.
+7. Game should be marked as incomplete/complete based on if Detectives were able to catch Mr. X or not. Also store who won for future references.
+
+# Requirements Discussions:
 - Room ID (So that multiple users can connect to this room)
 	- Create (host)
 	- Join 
