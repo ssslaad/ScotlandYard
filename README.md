@@ -54,10 +54,11 @@ https://www.figma.com/design/tBbWLISE7G41F2QKVyHDoC/Scotland-Yard-Tracker?node-i
  		- If at any point of time, any of the detectives location and Mr. X's location is same, we should show the message "Game Over" for Mr. X. 
 		- Movement not possible for player (based on available tickets and current location)
 	  	- Tickets finished.
-	   	- If Mr. X plays all 24 moves, he Wins and game over for Detectives.
-8. Once the game is over, an option to "Show moves" of all the players during entire game should be visible to everyone.
-9. If user clicks on Show Moves", visual graph should be visible with step by step movement of each player in sequence(sequence should be same as was in the game).
-10. If user doesn't click on "Show Moves", they should be redirected to Start Screen (where they can either join/host the room). Name of the user should be automatically populated in the Start Screen.
+	   	- If Mr. X plays all 24 moves, he Wins and it's game over for Detectives.
+8. Once the game is over:
+	- An option to "Show moves" of all the players during entire game should be visible to everyone.
+	- If user clicks on Show Moves", visual graph should be visible with step by step movement of each player in sequence(sequence should be same as was in the game).
+	- If user doesn't click on "Show Moves", they should be redirected to Start Screen (where they can either join/host the room). Name of the user should be automatically populated in the Start Screen.
 
 ## Non-functional Requirements:
 1. Room ID should be unique and given from backend.
