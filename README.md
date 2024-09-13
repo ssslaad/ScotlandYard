@@ -116,9 +116,8 @@ Game Over (for Mr. X):
  
 # High Level Design (HLD)
 <p align="center">
-  <img src="![scotlandyardtracker](https://github.com/user-attachments/assets/6bd0d963-2d1c-45d4-b085-d57fd014563f)" />
+  <img src="[![scotlandyardtracker](https://github.com/user-attachments/assets/6bd0d963-2d1c-45d4-b085-d57fd014563f)](https://github.com/ssslaad/ScotlandYard/blob/main/HLD_ScotlandYartTracker.jpg)" />
 </p>
-![scotlandyardtracker](https://github.com/user-attachments/assets/6bd0d963-2d1c-45d4-b085-d57fd014563f)
 
 - All the players creates a communication channel with game server.
 - Player (Host) sends request to create a room to the server (along with password), Game server creates room id, persists id and pwd of room in DB.
