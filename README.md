@@ -113,29 +113,31 @@ Game Over (for Mr. X):
 5. User should be stored in DB and should be uniquely identifiable.
 6. Moves of all the players of all the games should be stored in DB for future references.
 7. Game should be marked as incomplete/complete based on if Detectives were able to catch Mr. X or not. Also store who won for future references.
-8. 
-9. 
-
-
-// step 1 : 
-// step 2 : 
-// step 3 : Mr. x reveal location
-// step 4 : Mr. x
-// step 5 : Mr. x
-
-- Modules :
-  	- Landing page
-	- Create Room (no. of players, roles assignment option - random/custom)
-        - Join Room
-	- Loby - Role assignment(random/custom), start game button (disabled until all roles assigned)
-	- Game(Playground)
- 		- Initialization (Start locations)
-    		- Step (max. 24)
-     		- Mr.X special abilities (2 step + reveal position) 
-      		- Game Over
-	- Reconnecting Module
-	- Add Friend(Good to have)
  
- 
+# High Level Design (HLD)
+
+![scotlandyardtracker](https://github.com/user-attachments/assets/6bd0d963-2d1c-45d4-b085-d57fd014563f)
+![scotlandyardtracker](https://github.com/user-attachments/assets/6bd0d963-2d1c-45d4-b085-d57fd014563f)
+
+
+- All the players creates a communication channel with game server.
+- Player (Host) sends request to create a room to the server (along with password), Game server creates room id, persists id and pwd of room in DB.
+- Another player requests to joins a room using room id and pwd, Game server persists this information (player joined which room) in DB.
+- Host starts the game, random roles are assigned to all the players and persisted in DB.
+- Any player sends move/step mesasge to the game server, Game server receives the message, persist it in DB and broadcasts the move to all the players of that room.
+- Whenever Game is over, then room id should be marked as inactive in the DB.
+
+# Modules :
+- Landing page
+- Create Room (no. of players, roles assignment option - random/custom)
+- Join Room
+- Loby - Role assignment(random/custom), start game button (disabled until all roles assigned)
+- Game(Playground)
+	- Initialization (Start locations)
+	- Step (max. 24)
+	- Mr.X special abilities (2 step + reveal position) 
+	- Game Over
+- Reconnecting Module
+- Add Friend(Good to have)
  
  
